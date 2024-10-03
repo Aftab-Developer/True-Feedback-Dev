@@ -107,6 +107,7 @@ const page = () => {
  } 
  const copyToClipboard = function() {
     navigator.clipboard.writeText(acceptingMessege);
+   document.execCommand("copy")
     toast({
       variant : "default",
       title : "Success",
