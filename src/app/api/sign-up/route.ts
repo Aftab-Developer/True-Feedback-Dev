@@ -2,8 +2,7 @@ import { userModel } from "@/models/UserModel";
 import { dbConnect } from "@/utils/dbConnect"; 
 import {NextRequest , NextResponse} from "next/server" ; 
 import bcrypt from "bcrypt" ; 
-import sendEmail from "@/helpers/sendEmail" ;
-
+import {sendEmail} from "@/helpers/sendEmail"
 export async function POST (request : NextRequest ) {
      try {  
        const {username,email,password} = await request.json() ;  
@@ -42,7 +41,7 @@ export async function POST (request : NextRequest ) {
         }); 
         await newUser.save() ;  
         // Send verification email 
-         const emailRes =  await sendEmail({username,email,otpCode : verifyCode}) ; 
+         const emailRes =  await sendEmail({username,email,otp: verifyCode}) ; 
          if(!emailRes.success) {
             return NextResponse.json({message : emailRes.message},{status:400}) ;
          } 
