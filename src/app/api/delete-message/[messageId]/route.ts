@@ -1,11 +1,11 @@
 import { getServerSession } from "next-auth";
-import {  NextResponse } from "next/server";
+import {  NextRequest, NextResponse } from "next/server";
 import { authOptions } from "../../auth/[...nextauth]/options";
 import { dbConnect } from "@/utils/dbConnect";
 import { userModel } from "@/models/UserModel";
 import mongoose from "mongoose"; // Import mongoose for ObjectId validation
 
-export async function DELETE( { params }: { params: { messageId: string } }) {
+export async function DELETE( req : NextRequest ,{ params }: { params: { messageId: string } }) {
     const session = await getServerSession(authOptions);
     
     if (!session || !session?.user) {
