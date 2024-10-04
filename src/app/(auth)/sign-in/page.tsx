@@ -79,7 +79,7 @@ const page = () => {
              Join Mystery Messege
           </h1> 
           <p className="mb-4">
-              Sign In to start your journey
+              Sign In to start your journey 
           </p>
         </div> 
         <div>

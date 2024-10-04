@@ -2,12 +2,12 @@
 
 "use client"
 
-import { use, useState } from "react";
-import { useCompletion } from "ai/react";
+import {  useState } from "react";
+// import { useCompletion } from "ai/react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { messageSchema } from "@/schemas/messageSchema";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 import { z } from "zod"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
