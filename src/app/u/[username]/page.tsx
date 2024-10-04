@@ -29,7 +29,7 @@ const MessageArr = [
 ];
 
 
-const page = () => {
+const Page = () => {
   let [Arr, setArr] = useState<string[]>(MessageArr);
   const [stages, setStages] = useState<string>("stage1");
   const { toast } = useToast();
@@ -251,7 +251,7 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
 
 
 

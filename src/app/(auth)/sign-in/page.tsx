@@ -15,7 +15,7 @@ import Image from "next/image";
  
 
 
-const page = () => { 
+const Page = () => { 
     const router =  useRouter() ;
     const [isFormSubmitting , SetisFormSubmitting] = useState<boolean>(false) ;  
     const {toast} = useToast() ;
@@ -141,4 +141,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
