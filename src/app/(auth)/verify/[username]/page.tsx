@@ -11,16 +11,12 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { useSession } from "next-auth/react";
 const Page = ()  => { 
   const [isSubmitting , setisSubmitting] = useState<boolean>(false) ;  
   const router = useRouter() ;
   const {toast} = useToast()  
   const param = useParams() ; 
-  const username = param.username  as string
-const params = decodeURIComponent(username) ;
-
-const {data:session} = useSession()
+  const username = decodeURIComponent( param.username  as string) ;
   const form = useForm({
     resolver : zodResolver(
       verifyCodeSchema 

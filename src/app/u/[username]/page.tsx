@@ -30,7 +30,7 @@ const MessageArr = [
 
 
 const Page = () => {
-  let [Arr, setArr] = useState<string[]>(MessageArr);
+  const [Arr, setArr] = useState<string[]>(MessageArr);
   const [stages, setStages] = useState<string>("stage1");
   const { toast } = useToast();
   const [isLoading, setIsloading] = useState<boolean>(false);   

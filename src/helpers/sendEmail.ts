@@ -21,7 +21,7 @@ export async function sendEmail({username , email , otp} : {username :string,ema
     }) ;  
     return {success : true , message : "Email send"}
    } catch (error) {
-      return {success : false , message : "Email not send"}
+      return {success : false , message : "Email not send" + error}
    }
     
 }

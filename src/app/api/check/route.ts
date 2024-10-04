@@ -1,8 +1,7 @@
 import { userModel } from "@/models/UserModel";
-import { usernameSchema } from "@/schemas/signUpSchema";
 import { dbConnect } from "@/utils/dbConnect";
 import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
+
 
 export async function GET (request:NextRequest) {
   const {searchParams} = request.nextUrl ;
