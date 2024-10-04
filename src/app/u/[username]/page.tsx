@@ -86,12 +86,12 @@ const Page = () => {
     }
   });
 
-  const Message = form.watch('content');
+   form.watch('content');
 
   const getMessageFromInput = (message: string) => {
     form.setValue('content', message)
   }
-  let username = session?.user.username ?? session?.user.name ;
+  const username = session?.user.username ?? session?.user.name ;
 
 
   const onSubmit = async (data?: z.infer<typeof messageSchema>) => {

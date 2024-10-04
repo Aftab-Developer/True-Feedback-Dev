@@ -2,7 +2,7 @@ import { userModel } from "@/models/UserModel";
 import { authOptions } from "../auth/[...nextauth]/options";
 import { dbConnect } from "@/utils/dbConnect";
 import {getServerSession} from "next-auth" ; 
-import { NextRequest, NextResponse } from "next/server"; 
+import { NextResponse } from "next/server"; 
 
 
 export async function GET() {
