@@ -2,7 +2,6 @@
 import { User } from "next-auth";
 import { signOut, useSession } from "next-auth/react"
 import { Button } from "./ui/button";
-import { Link } from "lucide-react";
 import { useRouter } from "next/navigation"; 
 import Image from "next/image";
 
