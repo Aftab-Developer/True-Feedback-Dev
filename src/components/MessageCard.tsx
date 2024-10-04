@@ -1,11 +1,11 @@
 "use client"
 import { message } from "@/models/UserModel"
 import dayjs from "dayjs" ;
-import { Loader2, X } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "./ui/alert-dialog";
 import { Button } from "./ui/button";
-import { toast, useToast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import { X } from "lucide-react";
 
 type MessegeProps = {
     message : message,
